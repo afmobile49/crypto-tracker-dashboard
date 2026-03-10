@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Tracker Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">₿</span>
+        <span class="brand-text">
+          <strong>Crypto Tracker</strong>
+          <small>Live Market Dashboard</small>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#about">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button id="refreshBtn" class="refresh-button" type="button">Refresh Data</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Crypto market monitoring made simple</p>
+          <h1>Track live cryptocurrency prices with a clean dashboard.</h1>
+          <p class="hero-text">
+            This project uses HTML, CSS, and JavaScript to fetch live cryptocurrency
+            market data from a public API and display it in a responsive dashboard.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#dashboard" class="btn btn-primary">View Dashboard</a>
+            <a href="faq.html" class="btn btn-secondary">Learn More</a>
+          </div>
+
+          <div class="status-panel">
+            <p id="statusMessage" class="status-message">Loading live market data...</p>
+            <p id="lastUpdated" class="last-updated">Last updated: --</p>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini-screen">
+            <div class="mini-screen-top">
+              <span>Live Dashboard Preview</span>
+              <span>USD Market View</span>
+            </div>
+
+            <div class="preview-stats">
+              <div class="preview-box">
+                <span>BTC</span>
+                <strong id="previewBtc">--</strong>
+              </div>
+              <div class="preview-box">
+                <span>ETH</span>
+                <strong id="previewEth">--</strong>
+              </div>
+              <div class="preview-box">
+                <span>SOL</span>
+                <strong id="previewSol">--</strong>
+              </div>
+              <div class="preview-box">
+                <span>XAUT</span>
+                <strong id="previewXaut">--</strong>
+              </div>
+			  <div class="preview-box">
+				  <span>USDT</span>
+				  <strong id="previewUsdt">--</strong>
+			  </div>			  
+            </div>
+
+            <div class="preview-note">
+              Public API data is refreshed when the button is clicked.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="dashboard-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Market Dashboard</h2>
+          <p>Selected cryptocurrency assets with live prices, daily change, and market cap.</p>
+        </div>
+
+        <div id="coinCards" class="cards-grid">
+          <!-- JavaScript inserts cards here -->
+        </div>
+
+        <div class="table-wrapper">
+          <table class="market-table">
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Symbol</th>
+                <th>Price (USD)</th>
+                <th>24h Change</th>
+                <th>Market Cap</th>
+              </tr>
+            </thead>
+            <tbody id="coinTableBody">
+              <!-- JavaScript inserts rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="info-section">
+      <div class="container info-grid">
+        <article class="info-card">
+          <h3>About This Project</h3>
+          <p>
+            This project was created as a portfolio example to demonstrate API integration,
+            JSON processing, dynamic DOM updates, responsive layout design, and practical
+            JavaScript development.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Technologies Used</h3>
+          <p>
+            The dashboard is built with HTML for structure, CSS for styling, and JavaScript
+            for fetching and displaying live cryptocurrency data from the CoinGecko public API.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Project Goal</h3>
+          <p>
+            The goal is to build a simple but professional-looking dashboard that shows how
+            front-end code can connect to public APIs and present useful market information.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Crypto Tracker</h4>
+        <p>
+          A simple cryptocurrency dashboard project built for portfolio and API practice.
+        </p>
+      </div>
+
+      <div>
+        <h4>Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Developer</h4>
+        <p>Afshin</p>
+        <p>Email: afmobile49@gmail.com</p>
+        <p>Phone: 818-949-6609</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Crypto Tracker. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
