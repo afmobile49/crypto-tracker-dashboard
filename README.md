@@ -26,3 +26,6 @@ How to run
 Open index.html in your browser.
 
 Click the refresh button to reload prices.
+
+Live Demo:
+https://afmobile49.github.io/crypto-tracker-dashboard/
