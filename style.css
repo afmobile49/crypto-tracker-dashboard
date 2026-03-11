@@ -1,18 +1,18 @@
 body{
 
-  font-family:Arial, Helvetica, sans-serif;
-  margin:0;
-  background:#f5f7fb;
-  color:#1f2937;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	background:#f5f7fb;
+	color:#1f2937;
 
 }
 
 
 .container{
 
-  width:90%;
-  max-width:1100px;
-  margin:auto;
+	width:90%;
+	max-width:1100px;
+	margin:auto;
 
 }
 
@@ -20,18 +20,18 @@ body{
 
 .top-header{
 
-  background:white;
-  border-bottom:1px solid #ddd;
+	background:white;
+	border-bottom:1px solid #ddd;
 
 }
 
 
 .nav-wrap{
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:15px 0;
 
 }
 
@@ -39,16 +39,16 @@ body{
 
 .brand{
 
-  display:flex;
-  align-items:center;
-  gap:10px;
+	display:flex;
+	align-items:center;
+	gap:10px;
 
 }
 
 
 .brand-icon{
 
-  font-size:28px;
+	font-size:28px;
 
 }
 
@@ -56,10 +56,10 @@ body{
 
 .main-nav a{
 
-  margin-right:15px;
-  text-decoration:none;
-  font-weight:bold;
-  color:#333;
+	margin-right:15px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#333;
 
 }
 
@@ -67,11 +67,11 @@ body{
 
 .refresh-btn{
 
-  background:#2dd4bf;
-  border:none;
-  padding:10px 15px;
-  border-radius:20px;
-  cursor:pointer;
+	background:#2dd4bf;
+	border:none;
+	padding:10px 15px;
+	border-radius:20px;
+	cursor:pointer;
 
 }
 
@@ -79,9 +79,9 @@ body{
 
 .hero{
 
-  background:#162532;
-  color:white;
-  padding:60px 0;
+	background:#162532;
+	color:white;
+	padding:60px 0;
 
 }
 
@@ -89,7 +89,7 @@ body{
 
 .market-section{
 
-  padding:50px 0;
+	padding:50px 0;
 
 }
 
@@ -97,9 +97,9 @@ body{
 
 .coins-grid{
 
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:15px;
 
 }
 
@@ -107,10 +107,10 @@ body{
 
 .coin-box{
 
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+	background:white;
+	padding:20px;
+	border-radius:12px;
+	box-shadow:0 4px 10px rgba(0,0,0,0.05);
 
 }
 
@@ -118,8 +118,8 @@ body{
 
 .price{
 
-  font-size:22px;
-  font-weight:bold;
+	font-size:22px;
+	font-weight:bold;
 
 }
 
@@ -127,7 +127,7 @@ body{
 
 .change.up{
 
-  color:green;
+	color:green;
 
 }
 
@@ -135,7 +135,7 @@ body{
 
 .change.down{
 
-  color:red;
+	color:red;
 
 }
 
@@ -143,9 +143,9 @@ body{
 
 .market-table{
 
-  width:100%;
-  border-collapse:collapse;
-  margin-top:30px;
+	width:100%;
+	border-collapse:collapse;
+	margin-top:30px;
 
 }
 
@@ -153,8 +153,8 @@ body{
 .market-table th,
 .market-table td{
 
-  padding:12px;
-  border-bottom:1px solid #ddd;
+	padding:12px;
+	border-bottom:1px solid #ddd;
 
 }
 
@@ -162,11 +162,66 @@ body{
 
 .footer{
 
-  background:#0a1118;
-  color:white;
-  text-align:center;
-  padding:25px 0;
-  margin-top:40px;
+	background:#0a1118;
+	color:white;
+	text-align:center;
+	padding:25px 0;
+	margin-top:40px;
 
 }
 
+
+.cards-grid {
+	
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 20px;
+  
+}
+
+.coin-card {
+	
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  
+}
+
+.coin-card-top {
+	
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.coin-icon {
+	
+  width: 32px;
+  height: 32px;
+  
+}
+
+.coin-title {
+	
+  font-weight: bold;
+  
+}
+
+.coin-symbol {
+	
+  font-size: 12px;
+  color: #666;
+  
+}
+
+.positive {
+color: #2e7d32;
+font-weight: 600;
+}
+
+.negative {
+color: #c62828;
+font-weight: 600;
+}
