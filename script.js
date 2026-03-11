@@ -2,11 +2,11 @@
 
 
 const coins = [
-"bitcoin",
-"ethereum",
-"solana",
-"tether-gold",
-"tether"
+  "bitcoin",
+  "ethereum",
+  "solana",
+  "tether-gold",
+  "tether"
 ]
 
 
@@ -34,7 +34,7 @@ renderTable(data)
 }
 catch(err){
 
-console.log("API error", err)
+  console.log("API error", err)
 
 }
 
@@ -101,3 +101,4 @@ tableBody.appendChild(row)
 refreshButton.addEventListener("click",loadMarketData)
 
 loadMarketData()
+
