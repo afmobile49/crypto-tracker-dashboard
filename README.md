@@ -1,31 +1,30 @@
-Crypto Monitor Project
+Crypto Tracker Dashboard
 
+This project is a simple front-end dashboard that loads
+cryptocurrency data from the CoinGecko public API.
 
-This is a small front-end project that displays cryptocurrency prices.
+The goal of this project is to demonstrate how a web page
+can retrieve API data using JavaScript and display it
+using HTML and CSS.
 
-The page sends a request to the CoinGecko API and loads live data.
+Features
 
-The project is built using:
+- Displays market prices for several popular coins
+- Shows trending cryptocurrencies
+- Simple responsive layout
+- Navigation between multiple pages
 
-HTML
-CSS
-JavaScript
+Technologies Used
 
+- HTML
+- CSS
+- JavaScript
+- CoinGecko Public API
 
-Coins included in the dashboard:
-
-Bitcoin
-Ethereum
-Solana
-Tether Gold
-Tether
-
-
-How to run
-
-Open index.html in your browser.
-
-Click the refresh button to reload prices.
+Running the Project
 
 Live Demo:
-https://afmobile49.github.io/crypto-tracker-dashboard/
+ https://afmobile49.github.io/crypto-tracker-dashboard/
+in your web browser.
+
+
