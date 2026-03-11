@@ -1,104 +1,105 @@
-// simple crypto dashboard script
+const coins = ["bitcoin","ethereum","solana","tether","binancecoin"]
 
-
-const coins = [
-  "bitcoin",
-  "ethereum",
-  "solana",
-  "tether-gold",
-  "tether"
-]
-
-
-const refreshButton = document.getElementById("btnRefresh")
-const cardsArea = document.getElementById("coinsArea")
 const tableBody = document.getElementById("tableCoins")
+const cardsArea = document.getElementById("coinsArea")
+const statusText = document.getElementById("statusText")
+const refreshButton = document.getElementById("btnRefresh")
 
+//-------------------------------------------------------------
 
 
 async function loadMarketData(){
 
-const url =
-"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=" + coins.join(",")
+	const url =
+	"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=" + coins.join(",")
 
-try{
+	statusText.textContent = "Loading market data..."
 
-const response = await fetch(url)
+	try{
 
-const data = await response.json()
+	const response = await fetch(url)
 
-renderCards(data)
+	if(!response.ok){
+	throw new Error("Request failed")
+	}
 
-renderTable(data)
+	const data = await response.json()
+
+	renderCards(data)
+	renderTable(data)
+
+	statusText.textContent = "Market data updated"
+
+	}
+
+	catch(err){
+
+	console.log("API error", err)
+
+	statusText.textContent = "Could not load market data"
+
+	}
 
 }
-catch(err){
 
-  console.log("API error", err)
-
-}
-
-}
-
-
+//-------------------------------------------------------------
 
 function renderCards(data){
 
-cardsArea.innerHTML = ""
+	cardsArea.innerHTML = ""
 
-data.forEach(c => {
+	data.forEach(coin => {
 
-const card = document.createElement("div")
+	const card = document.createElement("div")
+	card.className = "coin-box"
 
-card.className = "coin-box"
+	let change = coin.price_change_percentage_24h
+	let changeClass = change >= 0 ? "positive" : "negative"
 
-card.innerHTML = `
+	card.innerHTML = `
+	<h3>${coin.name}</h3>
+	<p>$${coin.current_price.toLocaleString()}</p>
+	<p class="${changeClass}">
+	${change.toFixed(2)}%
+	</p>
+	`
 
-<h3>${c.name}</h3>
+	cardsArea.appendChild(card)
 
-<p class="price">$${c.current_price}</p>
-
-<p class="change ${c.price_change_percentage_24h >=0 ? "up":"down"}">
-${c.price_change_percentage_24h.toFixed(2)}%
-</p>
-
-`
-
-cardsArea.appendChild(card)
-
-})
+	})
 
 }
 
+//-------------------------------------------------------------
 
 
 function renderTable(data){
 
-tableBody.innerHTML = ""
+	tableBody.innerHTML = ""
 
-data.forEach(c=>{
+	data.forEach(coin => {
 
-const row = document.createElement("tr")
+	const row = document.createElement("tr")
 
-row.innerHTML = `
+	row.innerHTML = `
+	<td>${coin.name}</td>
+	<td>${coin.symbol.toUpperCase()}</td>
+	<td>$${coin.current_price.toLocaleString()}</td>
+	<td>${coin.price_change_percentage_24h.toFixed(2)}%</td>
+	<td>$${coin.market_cap.toLocaleString()}</td>
+	`
 
-<td>${c.name}</td>
-<td>${c.symbol.toUpperCase()}</td>
-<td>$${c.current_price}</td>
-<td>${c.price_change_percentage_24h.toFixed(2)}%</td>
-<td>$${c.market_cap.toLocaleString()}</td>
+	tableBody.appendChild(row)
 
-`
-
-tableBody.appendChild(row)
-
-})
+	})
 
 }
 
 
 
-refreshButton.addEventListener("click",loadMarketData)
+if(refreshButton){
+	refreshButton.addEventListener("click", loadMarketData)
+}
+
 
 loadMarketData()
-
