@@ -1,130 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Crypto Price Monitor</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<header class="top-header">
-
-<div class="container nav-wrap">
-
-<div class="brand">
-
-<span class="brand-icon">₿</span>
-
-<div class="brand-text">
-<strong>Crypto Monitor</strong>
-<small>Simple Market Viewer</small>
-</div>
-
-</div>
-
-<nav class="main-nav">
-
-<a href="index.html" class="active">Home</a>
-<a href="#market">Market</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<button id="btnRefresh" class="refresh-btn">Refresh</button>
-
-</div>
-
-</header>
-
-
-<section class="hero">
-
-<div class="container">
-
-<h1>Track Cryptocurrency Prices</h1>
-
-<p>
-A small dashboard project that loads market data from a public API
-and shows prices for some well known crypto assets.
-</p>
-
-</div>
-
-</section>
-
-
-
-<section id="market" class="market-section">
-
-<div class="container">
-
-<h2>Market Prices</h2>
-
-<p class="section-desc">
-Data is loaded from the CoinGecko public API.
-</p>
-
-<div id="coinsArea" class="coins-grid">
-
-<!-- cards will appear here -->
-
-</div>
-
-
-<div class="table-wrap">
-
-<table class="market-table">
-
-<thead>
-
-<tr>
-
-<th>Coin</th>
-<th>Symbol</th>
-<th>Price USD</th>
-<th>24h Change</th>
-<th>Market Cap</th>
-
-</tr>
-
-</thead>
-
-<tbody id="tableCoins">
-
-<!-- rows added by JS -->
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<footer class="footer">
-
-<div class="container">
-
-<p>
-Crypto Dashboard project – simple front-end example.
-</p>
-
-</div>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Crypto Price Monitor</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  
+  <body>
+  
+    <header class="top-header">
+    
+    <div class="container nav-wrap">
+    
+    <div class="brand">
+    
+    <span class="brand-icon">₿</span>
+    
+    <div class="brand-text">
+    <strong>Crypto Monitor</strong>
+    <small>Simple Market Viewer</small>
+    </div>
+    
+    </div>
+    
+    <nav class="main-nav">
+    
+      <a href="index.html" class="active">Home</a>
+      <a href="#market">Market</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      
+    </nav>
+    
+    <button id="btnRefresh" class="refresh-btn">Refresh</button>
+    
+    </div>
+    
+    </header>
+    
+    
+    <section class="hero">
+    
+      <div class="container">
+      
+      <h1>Track Cryptocurrency Prices</h1>
+      
+      <p>
+        A small dashboard project that loads market data from a public API
+        and shows prices for some well known crypto assets.
+      </p>
+      
+      </div>
+    
+    </section>
+    
+    
+    
+    <section id="market" class="market-section">
+    
+    <div class="container">
+    
+    <h2>Market Prices</h2>
+    
+    <p class="section-desc">
+      Data is loaded from the CoinGecko public API.
+    </p>
+    
+    <div id="coinsArea" class="coins-grid">
+    
+    <!------------------------------------------->
+    
+    </div>
+    
+    
+    <div class="table-wrap">
+    
+    <table class="market-table">
+    
+      <thead>
+      
+      <tr>
+      
+        <th>Coin</th>
+        <th>Symbol</th>
+        <th>Price USD</th>
+        <th>24h Change</th>
+        <th>Market Cap</th>
+      
+      </tr>
+      
+      </thead>
+      
+      <tbody id="tableCoins">
+      
+      <!----------------------------->
+      
+      </tbody>
+    
+    </table>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <footer class="footer">
+    
+    <div class="container">
+    
+    <p>
+      Crypto Dashboard project – simple front-end example.
+    </p>
+    
+    </div>
+    
+    </footer>
+    
+    <script src="script.js"></script>
+    
+  </body>
 </html>
+
